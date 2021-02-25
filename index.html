@@ -7,6 +7,35 @@
 
     </head>
     <body>
+
+        <div class="form-container">
+
+            <form id="create-product-form" style="">
+              <h3>Create a product!</h3>
+          
+              <input id='input-name' type="text" name="title" value="" placeholder="Enter your product name..." class="input-text">
+              <br><br>
+              <textarea id='input-description' name="description" rows="8" cols="80" value="" placeholder="Enter your product description..."></textarea>
+              <br><br>
+              <input id='input-url' type="text" name="image" value="" placeholder="Enter your product image URL..." class="input-text">
+              <br><br>
+          
+              <p> Choose a Cart</p>
+              <select id="carts" name="carts">
+                <option value="1">Men's</option>
+                <option value="2">Women's</option>
+                <option value="3">They/Them</option>
+              </select>
+              <br><br>
+          
+              <input id= 'create-button' type="submit" name="submit" value="Create New product" class="submit">
+            </form>
+          
+          </div>
+
+          <br><br>
+
+
         <div id="product-container">   
 
 
