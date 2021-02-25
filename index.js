@@ -30,18 +30,39 @@ function getProds(){
 }
 
 function createFormHandler(e) {
-
-e.preventDefault()
+    e.preventDefault()
     const nameInput = document.querySelector('#input-name').value
     const descriptionInput = document.querySelector('#input-description').value
-    const imageInput = document.querySelector('#image-name').value
-    const cartId = parseInt(document.querySelector('#cart').value)
+    const imageInput = document.querySelector('#input-url').value
+    const priceInput = document.querySelector('#input-price').value
+    const cartId = parseInt(document.querySelector('#carts').value)
     postFetch(nameInput, descriptionInput, imageInput, cartId)
+
+
+
+
+
 }
 
 
 function postFetch(name, description, image_url, cart_id) {
     console.log(name, description, image_url, cart_id);
+    fetch(endPoint, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(bodyData)
+      })
+      .then(response => response.json())
+      .then(product => {
+        console.log(product);
+    
+    
+        document.querySelector('#product-container').innerHTML += productMarkup;
+      })
+
+
+
+
 
 }
 
